@@ -116,6 +116,7 @@ span:hover{
   cursor: pointer;
   font-size: 0.55rem;
   text-decoration: rgb(30, 29, 29);
+
 }
 
 .signup_link{
@@ -136,4 +137,7 @@ span:hover{
   background: rgb(243, 241, 241);
   color: white;
   background-color: white;
+}
+.appleLogo{
+  margin-right: 0.5rem;
 }

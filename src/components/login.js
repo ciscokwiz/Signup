@@ -1,5 +1,6 @@
 import logo from  './logo.svg';
 import {useState} from 'react';
+import {GrApple} from "react-icons/gr";
 
 
 export default function Login(props){
@@ -19,7 +20,7 @@ const [Action, setAction] = useState("Sign in")
                         <div className="loginPage_content">
                             {Action==="Sign up"?<input type="text" placeholder="Name" className='Username' required/> : <div></div>}
                             <input type="email" placeholder="Email" className="Email" required/>
-                            {Action==="Apple ID" ?<div></div>:<input type='password' placeholder="Password" className='Password' required/>}
+                            {Action==="Apple ID"?<div></div>:<input type='password' placeholder="Password" className='Password' required/>}
                             {Action==="Sign in"?<h5 className='forgot'>Forgot Password? <span className="forgotPassword" onClick={()=>setAction("Forgot Password")}> Click Here! </span> </h5>: <div></div>}
                         </div>
                         <div className="loginPage_buttons">
@@ -29,7 +30,7 @@ const [Action, setAction] = useState("Sign in")
                                 <h5 className='other-signin'> sign in with </h5>
                                 <div className="underline"></div>
                             </div>
-                            <button className={Action==="Apple ID"? "otherSigninButton gray ":"otherSigninButton"} onClick={()=>setAction("Apple ID")}> Sign in with Apple </button>
+                            <button className="otherSigninButton" onClick={()=>setAction("Apple ID")}><GrApple className='appleLogo'/> Sign in with Apple </button>
 
 
                         </div>
